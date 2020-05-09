@@ -4,7 +4,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const OptimizeCssAssetsWebpackPlugin = require('optimize-css-assets-webpack-plugin')
 const WorkboxWebpackPlugin = require('workbox-webpack-plugin')
 const webpack = require('webpack')
-const demo = require("./webpack.demo.plugin")
+// const demo = require("./webpack.demo.plugin")
 const AddAssetHtmlWebpackPlugin = require('add-asset-html-webpack-plugin')
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 //在生产环境开启 tree shaking 去除无用代码
@@ -42,20 +42,20 @@ module.exports = {
           {
             loader: 'babel-loader',
             options: {
-              presets: [
-                [
-                  "@babel/preset-env",
-                  {
-                    useBuiltIns: 'usage',
-                    corejs: {
-                      version: 3
-                    },
-                    targets: {
-                      chrome: '60'
-                    }
-                  }
-                ]
-              ],
+              // presets: [
+              //   [
+              //     "@babel/preset-env",
+              //     {
+              //       useBuiltIns: 'usage',
+              //       corejs: {
+              //         version: 3
+              //       },
+              //       targets: {
+              //         chrome: '60'
+              //       }
+              //     }
+              //   ]
+              // ],
               // 开启bable缓存
               cacheDirectory: true
             }
@@ -78,7 +78,7 @@ module.exports = {
     ]
   },
   plugins: [
-    new demo(),
+    // new demo(),
     new HtmlWebpackPlugin({
       template: './public/index.html',
       inject: true,

@@ -25,6 +25,23 @@ let prodConfig = {
   module: {
     rules: [
       {
+        test: /\.css$/,
+        use: [
+          MiniCssExtractPlugin.loader,
+          'css-loader',
+          {
+            loader: 'postcss-loader',
+            options: {
+              ident: 'postcss',
+              plugins: () => [
+                //找到package.json 根据环境变量改变兼容方式
+                require('postcss-preset-env')()
+              ]
+            }
+          }
+        ]
+      },
+      {
         test: /\.less$/,
         use: [
           MiniCssExtractPlugin.loader,

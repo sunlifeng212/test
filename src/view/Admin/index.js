@@ -1,10 +1,26 @@
 import React, { Component } from 'react';
-
+import { Route, Link, Switch, Redirect } from "react-router-dom";
+import { Admin1, Admin2 } from '../index';
 class index extends Component {
     render() {
         return (
             <div>
-                admin
+                <h3>admin</h3>
+                <Link to={{
+                    pathname: '/admin/admin1/1',
+                }}>
+                    <span>admin1</span>
+                </Link>
+                <Link to={{
+                    pathname: '/admin/admin1/2',
+                }}>
+                    <span>admin2</span>
+                </Link>
+                <Switch>
+                    <Route path='/admin/admin1/:id' component={Admin1}></Route>
+                    <Route path='/admin/admin1/:id' component={Admin2}></Route>
+                    <Redirect to="/admin/admin1/1" from="/admin"></Redirect>
+                </Switch>
             </div>
         );
     }
