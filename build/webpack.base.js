@@ -42,20 +42,20 @@ module.exports = {
           {
             loader: 'babel-loader',
             options: {
-              // presets: [
-              //   [
-              //     "@babel/preset-env",
-              //     {
-              //       useBuiltIns: 'usage',
-              //       corejs: {
-              //         version: 3
-              //       },
-              //       targets: {
-              //         chrome: '60'
-              //       }
-              //     }
-              //   ]
-              // ],
+              presets: [
+                [
+                  "@babel/preset-env",
+                  {
+                    useBuiltIns: 'usage',
+                    corejs: {
+                      version: 3
+                    },
+                    targets: {
+                      chrome: '60'
+                    }
+                  }
+                ]
+              ],
               // 开启bable缓存
               cacheDirectory: true
             }

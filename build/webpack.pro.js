@@ -9,7 +9,7 @@ const TerserWebpackPlugin = require("terser-webpack-plugin")
 const speed = require("speed-measure-webpack-plugin")
 // const { BundleAnalyzerPlugin } = require("webpack-bundle-analyzer")
 const webpackbar = require("webpackbar")
-const smp = new speed()
+// const smp = new speed()
 
 process.env.NODE_ENV = "production"
 let prodConfig = {
@@ -188,6 +188,6 @@ let prodConfig = {
   //   "react-dom": "ReactDOM"
   // },
 };
-smp.wrap(merge(common, prodConfig))
+// smp.wrap(merge(common, prodConfig))
 module.exports = merge(common, prodConfig);
 // module.exports =smp.wrap(merge(common, prodConfig))
