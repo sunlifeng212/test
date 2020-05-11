@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
-
 class index extends Component {
   render() {
-    console.log("22222222",this.props)
+    console.log("22222222", this.props)
     return (
       <div>
 
@@ -11,5 +10,4 @@ class index extends Component {
     );
   }
 }
-
 export default index;
