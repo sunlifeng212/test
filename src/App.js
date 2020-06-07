@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import { HashRouter as Router, Route, Link, Switch, Redirect } from "react-router-dom";
 import { Login, NotFout, Admin, Admin1, Home } from './view'
 import "./App.less"
-// import { Map } from 'immutable';
+import { Map } from 'immutable';
+import "./sort"
 import { Button } from 'antd';
 // import 'antd/dist/antd.css';
 // import Button from 'antd/es/button';
@@ -14,15 +15,11 @@ class App extends Component {
     constructor(props) {
         super(props)
 
-        // let a = Map({
-        //     select: 'users',
-        //     filter: Map({ name: 'Cam' })
-        // })
-        // console.log(a)
-        // let b = a.set('select', 'people');
-        // console.log(b)
-        // console.log(a === b);
-        // a.get('filter') === b.get('filter'); // true
+        let a = Map({
+            select: 'users',
+            filter: Map({ name: 'Cam' })
+        })
+        let b = a.set('select', 'people');
     }
     render() {
         return (
