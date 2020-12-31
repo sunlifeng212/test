@@ -88,9 +88,11 @@
   "dependencies": {
     "@babel/polyfill": "^7.8.7",
     "antd": "^4.2.0",
+    "antd-mobile": "^2.3.3",
     "immutable": "^4.0.0-rc.12",
     "jquery": "^3.5.0",
     "koa": "^2.11.0",
+    "koa-body": "^4.2.0",
     "koa-route": "^3.2.0",
     "koa-static": "^5.0.0",
     "react": "^16.13.1",
