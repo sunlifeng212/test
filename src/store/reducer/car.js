@@ -1,11 +1,11 @@
-
 export default function (state = 9999, action) {
   switch (action.type) {
     case "ADD_TODO":
-      return action.id
-    case 'INCREMENT':
+      console.log('rere',action)
+      return state + action.id;
+    case "INCREMENT":
       return state + 1;
-    case 'DECREMENT':
+    case "DECREMENT":
       return state - 1;
     default:
       return state;

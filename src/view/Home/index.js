@@ -3,10 +3,12 @@ import {
   HashRouter as Router,
   Route,
   Link,
+  NavLink,
   Switch,
   Redirect,
 } from "react-router-dom";
 import "./index.less";
+import Footer from "../../view/components/footer";
 import imgURL from "../../static/image/bgd.png";
 class index extends Component {
   constructor(props) {
@@ -27,15 +29,7 @@ class index extends Component {
               <div
                 onClick={() => {
                   this.props.history.push({
-                    pathname: "/del/q?name=222",
-                    query: { name: "sunny" },
-                    state: "3",
-                    params: "eeeeeeeeeeeeeeeeeeee",
-                    r: 23,
-                    seach: {
-                      name: 2,
-                      age: 89,
-                    },
+                    pathname: "/del"
                   });
                 }}
                 key={item}
@@ -46,36 +40,14 @@ class index extends Component {
             );
           })}
         </div>
-        <Link
+        <NavLink
           to={{
-            pathname: "/del?tenantId=12121212",
+            pathname: "/del",
           }}
         >
           <span>departManange</span>
-        </Link>
-        <div className="btm">
-          <Link
-            to={{
-              pathname: "/home",
-            }}
-          >
-            <span>首页</span>
-          </Link>
-          <Link
-            to={{
-              pathname: "/admin",
-            }}
-          >
-            <span>发现</span>
-          </Link>
-          <Link
-            to={{
-              pathname: "/login",
-            }}
-          >
-            <span>我的</span>
-          </Link>
-        </div>
+        </NavLink>
+        <Footer></Footer>
       </React.Fragment>
     );
   }

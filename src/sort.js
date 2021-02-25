@@ -68,13 +68,8 @@ function charu(arr) {
   }
   return arr;
 }
-<<<<<<< HEAD
 var orgarr = [15, 47, 49, 61, 31, 3, 2];
 console.log("插入", charu(orgarr));
-
-=======
-var orgarr = [15, 47, 49, 61, 31, 3, 2]
-console.log("插入", charu(orgarr))
 //希尔排序
 function shellSort(arr) {
     var len = arr.length
@@ -173,4 +168,3 @@ function kuaisu(array) {
 }
 var arr = [12, 32, 4, 35, 456, 35, 23, 789, 32]
 console.log('kuaisu:', kuaisu(arr))
->>>>>>> 1714f14a360975988adda05c1fddc69d12b3252c

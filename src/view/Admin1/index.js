@@ -5,7 +5,6 @@ class index extends Component {
 
   render() {
     console.log("admin1",this.props)
-    debugger
     return (
       <div>
         <h2>admin1</h2>
@@ -15,7 +14,7 @@ class index extends Component {
             state: "3",
             params: "eeeeeeeeeeeeeeeeeeee"
           })
-        }}>goback</button>
+        }}>goadmin2</button>
       </div>
     );
   }

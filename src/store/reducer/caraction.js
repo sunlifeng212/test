@@ -15,5 +15,6 @@ export const addCountAsync = val => {
 export const setVisibilityFilter = filter => {
   return {
     type: 'SET_VISIBILITY_FILTER',
+    filter
   }
 }
