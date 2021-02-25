@@ -1,20 +1,14 @@
-
-export const addTodo = id => {
-  return {
-    type: 'ADD_TODO',
-    id
-  }
-}
-export const addCountAsync = val => {
-  return dispatch => {
+export const addTodo = (data) => ({ type: "ADD_TODO", data });
+export const addCountAsync = (val) => {
+  return (dispatch) => {
     setTimeout(() => {
-      dispatch(addTodo(val))
-    }, 2000)
-  }
-}
-export const setVisibilityFilter = filter => {
+      dispatch(addTodo(val));
+    }, 2000);
+  };
+};
+export const setVisibilityFilter = (filter) => {
   return {
-    type: 'SET_VISIBILITY_FILTER',
-    filter
-  }
-}
+    type: "SET_VISIBILITY_FILTER",
+    filter,
+  };
+};

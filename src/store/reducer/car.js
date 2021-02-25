@@ -1,8 +1,9 @@
 export default function (state = 9999, action) {
-  switch (action.type) {
+  let { type, data } = action;
+  console.log("rere", action);
+  switch (type) {
     case "ADD_TODO":
-      console.log('rere',action)
-      return state + action.id;
+      return state + data;
     case "INCREMENT":
       return state + 1;
     case "DECREMENT":

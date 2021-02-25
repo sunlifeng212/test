@@ -6,9 +6,13 @@ import store from "@/store";
 const render = (Component) => {
   ReactDOM.render(
     <Provider store={store}>
-        <Component />
+      <Component />
     </Provider>,
     document.getElementById("root")
   );
 };
 render(App);
+
+// store.subscribe(() => {
+//   render(App);
+// });

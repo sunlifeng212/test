@@ -10,10 +10,11 @@ import {
 } from "react-router-dom";
 import { connect } from "react-redux";
 import { addTodo, addCountAsync } from "../../store/reducer/caraction";
+
 class footer extends Component {
   componentDidMount() {
-    console.log("footer", this.props);
     setTimeout(() => {
+      // store.dispatch({type:'ADD_TODO',data:78})
       this.props.addTodo(8888);
     }, 3000);
   }
@@ -28,7 +29,7 @@ class footer extends Component {
         >
           <span>
             首页
-            {this.props.add}
+            {/* {this.props.add} */}
           </span>
         </NavLink>
         <NavLink
@@ -56,7 +57,7 @@ var mapState = (state) => {
     add: state.car,
   };
 };
-var mapDispatchToProps = (dispatch) => {
-  return { addTodo, addCountAsync };
-};
-export default connect(mapState, mapDispatchToProps)(footer);
+// var mapDispatchToProps = (dispatch) => {
+//   return { addTodo, addCountAsync };
+// };
+export default connect(mapState, { addTodo, addCountAsync })(footer);
