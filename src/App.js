@@ -8,8 +8,8 @@ import {
 } from "react-router-dom";
 import { Login, NotFout, Admin, Admin1, Home, Del } from "./view";
 import "./App.less";
-import { Map } from "immutable";
-import "./sort";
+// import { Map } from "immutable";
+// import "./sort";
 // import { Button } from 'antd';
 // import "antd-mobile/dist/antd-mobile.css";
 // import { Button } from "antd-mobile";
@@ -21,11 +21,11 @@ class App extends Component {
   constructor(props) {
     super(props);
 
-    let a = Map({
-      select: "users",
-      filter: Map({ name: "Cam" }),
-    });
-    let b = a.set("select", "people");
+    // let a = Map({
+    //   select: "users",
+    //   filter: Map({ name: "Cam" }),
+    // });
+    // let b = a.set("select", "people");
   }
   render() {
     return (

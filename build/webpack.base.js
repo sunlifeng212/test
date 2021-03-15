@@ -1,17 +1,13 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-const OptimizeCssAssetsWebpackPlugin = require("optimize-css-assets-webpack-plugin");
-const WorkboxWebpackPlugin = require("workbox-webpack-plugin");
 const webpack = require("webpack");
 // const demo = require("./webpack.demo.plugin")
-const AddAssetHtmlWebpackPlugin = require("add-asset-html-webpack-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 //在生产环境开启 tree shaking 去除无用代码
 //在package.json  sideEffects:false 表示所有代码都是没副作用的都可tree shaking开启后会把css文件去掉 中"sideEffects": ["*.css"]
 module.exports = {
   entry: {
-    index: "./src/index.js",
+    main: "./src/index.js",
   },
   output: {
     path: path.resolve(__dirname, "../ddd"),
@@ -81,7 +77,7 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: "./public/index.html",
       inject: true,
-      chunks: ["index"],
+      chunks: ["main"],
       minify: {
         collapseInlineTagWhitespace: true,
         removeComments: true,
@@ -96,7 +92,7 @@ module.exports = {
     extensions: [".js", ".json", ".css", ".less"],
     modules: [path.resolve(__dirname, "../node_modules"), "node_modules"],
   },
-  devtool: "source-map",
+  // devtool: "source-map",
 
-  // stats: "errors-only"
+  stats: "errors-only"
 };
